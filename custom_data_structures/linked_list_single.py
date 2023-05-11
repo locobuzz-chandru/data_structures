@@ -10,7 +10,7 @@ class SingleLinkedList:
 
     def display(self):
         if self.head is None:
-            return "Linked list is empty"
+            return []
         else:
             node = self.head
             list_ = []
@@ -32,22 +32,18 @@ class SingleLinkedList:
         node.next = new_node
 
     def insert_at_index(self, index, data):
-        new_node = Node(data)
-        node = self.head
-        for i in range(index - 1):
-            node = node.next
-        new_node.next = node.next
-        node.next = new_node
-
-    def reverse(self):
-        prev = None
-        node = self.head
-        while node is not None:
-            next_node = node.next
-            node.next = prev
-            prev = node
-            node = next_node
-        self.head = prev
+        if index > 0:
+            new_node = Node(data)
+            node = self.head
+            for i in range(index - 1):
+                node = node.next
+            new_node.next = node.next
+            node.next = new_node
+        elif index == 0:
+            self.insert_at_head(data)
+        elif index < 0:
+            lst = [i for i in range(len(self.display()) + 1)]
+            self.insert_at_index(lst[index], data)
 
     def delete_at_head(self):
         node = self.head
@@ -71,10 +67,20 @@ class SingleLinkedList:
         prev.next = node.next
         node.next = None
 
+    def reverse(self):
+        prev = None
+        node = self.head
+        while node is not None:
+            next_node = node.next
+            node.next = prev
+            prev = node
+            node = next_node
+        self.head = prev
+
 
 if __name__ == '__main__':
     L = SingleLinkedList()
-    print(L.display())
+    # print(L.display())
     L.insert_at_head(20)
     L.insert_at_tail(30)
     L.insert_at_tail(40)
@@ -82,8 +88,8 @@ if __name__ == '__main__':
     L.insert_at_head(10)
     L.insert_at_index(4, 50)
     print(L.display())
-    L.reverse()
-    print(L.display())
+    # L.reverse()
+    # print(L.display())
     # L.delete_at_head()
     # print(L.display())
     # L.delete_at_tail()
