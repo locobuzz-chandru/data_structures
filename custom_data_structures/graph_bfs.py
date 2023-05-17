@@ -6,7 +6,7 @@ class BFS:
 
     def add_node(self, node):
         if node in self.graph:
-            print(node, " is already present in the graph")
+            print(node, "is already present in the graph")
         else:
             self.graph[node] = []
 

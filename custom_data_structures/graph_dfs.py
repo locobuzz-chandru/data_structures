@@ -24,8 +24,7 @@ class BFS:
         if node not in graph_dict:
             print(f"{node} node is not present in graph")
             return
-        stack = []
-        stack.append(node)
+        stack = [node]
         while stack:
             current = stack.pop()
             if current not in visited_node:
