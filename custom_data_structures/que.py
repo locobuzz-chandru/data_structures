@@ -1,3 +1,8 @@
+# QUEUE is a user-defined data structure in python that is used to store data in the First In First Out (FIFO) manner.
+# In queues, the insertion and deletion are done at different ends, where the insertion is done at the rear end and the
+# deletion is done at the front end. So, the data which is inserted first will be removed from the queue first.
+# Since the first element inserted is served and removed first, the queue data structures in python are also known as
+# the First Come First Served data structure.
 import queue
 
 

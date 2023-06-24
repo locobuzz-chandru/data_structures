@@ -1,3 +1,16 @@
+# LINKED LIST is a sequence of data elements, which are connected together via links. Each element of a linked list is
+# called a node, and every node has two different fields. Data contains the value to be stored in the node.
+# Next contains a reference to the next node on the list. The first node of a linked list is called the Head node,
+# which helps us to access the entire linked list. The last node of the linked list is called the Tail node, which
+# resembles or marks the end of the linked list. Since the last node marks the end of the linked list, it points to a
+# NULL value or None.
+
+# Adv- Ease of Insertion/Deletion, Insertion at the beginning is a constant time operation and takes O(1) time, as
+# compared to arrays where inserting an element at the beginning takes O(n) time
+
+# DisAdv- Random access is not allowed, It takes a lot of time in traversing and changing the pointers,
+# Direct access to an element is not possible in a linked list as in an array by index, Sorting of linked lists is
+# very complex and costly
 class Node:
     def __init__(self, data=None):
         self.data = data

@@ -1,3 +1,7 @@
+# GRAPH is a non-linear structure of data consisting of nodes that are connected to other nodes of the graph.
+# The node of the graph is also known as vertex (V). A node can represent anything such as any location, port, houses,
+# buildings, landmarks, etc. They are anything that we can represent to be connected to other similar things.
+# Edges (E) are used to connect the vertices. The edges represent a relationship between various nodes of a graph.
 class Graph:
     def __init__(self):
         self.graph = {}

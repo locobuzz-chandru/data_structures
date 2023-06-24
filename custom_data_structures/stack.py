@@ -1,3 +1,7 @@
+# STACK is a user-defined data structures in python that are used to store data in the Last In First Out (LIFO) manner.
+# In stacks, the insertion and deletion are done at one end, where the end is generally called the top.
+# Since the last element inserted is served and removed first, the stack data structures in python are also known as the
+# Last Come First Served data structure.
 def stack():
     stack_ = []
     for x in range(1, 6):
