@@ -1,4 +1,4 @@
-class ClassGraph:
+class Graph:
     def __init__(self):
         self.graph = {}
 
@@ -39,18 +39,22 @@ class ClassGraph:
                 self.graph[node2].remove([node1, cost])
 
 
-obj = ClassGraph()
+obj = Graph()
 obj.add_node("A")
 obj.add_node("B")
 obj.add_node("C")
 obj.add_node("D")
+obj.add_node("E")
 print(obj.graph)
-obj.add_edge_weighted("A", "D", 10)
-obj.add_edge_weighted("C", "B", 8)
-obj.add_edge_weighted("A", "B", 6)
+obj.add_edge_weighted("A", "B", 5)
+obj.add_edge_weighted("A", "C", 10)
+obj.add_edge_weighted("A", "D", 12)
+obj.add_edge_weighted("B", "D", 13)
+obj.add_edge_weighted("B", "E", 8)
+obj.add_edge_weighted("C", "D", 15)
+obj.add_edge_weighted("D", "E", 15)
 print(obj.graph)
-# obj.delete_weighted_node("C")
+# obj.delete_weighted_node("E")
 # print(obj.graph)
-# obj.delete_weighted_edge("D", "A", 10)
-# print(obj.graph)
-
+obj.delete_weighted_edge("D", "A", 12)
+print(obj.graph)

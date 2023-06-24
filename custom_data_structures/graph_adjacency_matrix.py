@@ -1,4 +1,4 @@
-class ClassGraph:
+class Graph:
     def __init__(self):
         self.nodes = []
         self.graph = []
@@ -56,18 +56,21 @@ class ClassGraph:
             print()
 
 
-obj = ClassGraph()
+obj = Graph()
 obj.add_node("A")
 obj.add_node("B")
 obj.add_node("C")
 obj.add_node("D")
+obj.add_node("E")
 print(obj.nodes)
 # print(graph)
-obj.add_edge_weighted("A", "C", 10)
-obj.add_edge_weighted("D", "C", 8)
 obj.add_edge_weighted("A", "B", 5)
+obj.add_edge_weighted("A", "C", 10)
 obj.add_edge_weighted("A", "D", 12)
-obj.add_edge_weighted("B", "C", 15)
+obj.add_edge_weighted("B", "D", 13)
+obj.add_edge_weighted("B", "E", 8)
+obj.add_edge_weighted("C", "D", 15)
+obj.add_edge_weighted("D", "E", 15)
 obj.print_graph()
 # print()
 # obj.delete_node("B")
